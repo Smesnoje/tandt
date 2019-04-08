@@ -1,7 +1,15 @@
 .footer-container {
   @include xy-grid-container;
-  border-top: 1px solid $medium-gray;
-  margin-top: rem-calc(60);
+  max-width: 90rem;
+
+  .footer-title {
+    color: $color-white;
+    width: 100%;
+  }
+  .footer-link {
+    color: $color-white;
+    width: 100%;
+  }
 }
 
 .footer-grid {

@@ -138,6 +138,7 @@
         }
         @include breakpoint (xlarge) {
             margin-top: 76px;
+            margin-bottom: 150px;
 
             .post-card {
                 @include xy-cell(1 of 2, true , 88px, margin , right left top bottom);
