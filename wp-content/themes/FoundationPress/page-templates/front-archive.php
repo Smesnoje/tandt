@@ -10,6 +10,7 @@ get_header(); ?>
 <div class="filter filter_tags"></div>
 </header>
 <?php $posts = get_posts(-1) ?>
+<div class="portfoli_container">
 <?php foreach($posts as $post):?>
 	<?php // echo '<pre>' , var_dump($post) , '</pre>';?>
 	<!-- gets post tags -->
@@ -30,8 +31,7 @@ get_header(); ?>
 	<?php endif;?>
 	</div>
 <?php endforeach;?>
-
-
+</div>
 
 
 <script type="text/javascript" src="<?php echo $theme_root;?>/js/front-archive.js"></script>
