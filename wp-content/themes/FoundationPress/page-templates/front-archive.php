@@ -9,7 +9,15 @@ get_header(); ?>
 <h1>Our Work</h1>
 <div class="filter filter_tags"></div>
 </header>
-<?php $posts = get_posts(-1) ?>
+<?php $args = array(
+	'posts_per_page'   => -1,
+	'offset'           => 0,
+	'cat'         => '',
+	'category_name'    => '',
+	'post_type'        => 'post',
+	'post_status'      => 'publish',
+);?>
+<?php $posts = get_posts($args) ?>
 <div class="portfoli_container">
 <?php foreach($posts as $post):?>
 	<?php // echo '<pre>' , var_dump($post) , '</pre>';?>
