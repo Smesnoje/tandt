@@ -1,0 +1,150 @@
+.page-template-front-archive {
+
+    .main-container {
+        background-color: $color-dark;
+    }
+
+    .front-header {
+        @include breakpoint(small) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+
+            &_title {
+                width: 100%;
+                text-align: center;
+                color: $color-white;
+                margin-bottom: 30px;
+                font-weight: bold;
+            }
+
+
+            &_filters {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+                width: 100%;
+                &--tag {
+                    margin-right: 16px;
+                    font-size: $h5-medium-font-size;
+                    text-transform: uppercase;
+                    color: $color-white;
+    
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+
+        }
+        @include breakpoint(medium) {
+            
+
+
+        }
+
+        @include breakpoint(large) {
+            flex-wrap: nowrap;
+
+            &_title {
+                width: auto;
+                margin-bottom: 0;
+            }
+
+            &_filters {
+                width: auto;
+            }
+    
+        }
+        @include breakpoint(xlarge) {
+            
+        }
+    }
+
+    .posts-container {
+        @include breakpoint (small) {
+            @include xy-grid-container;
+            max-width: 90rem;
+          
+            @include xy-grid;
+
+            .post-card {
+                @include xy-cell (12);
+                margin-bottom: 30px;
+                background-size: cover;
+                background-position: center;
+                height: 484px;
+
+                &_hover {
+                    width: 100%;
+                    height: 100%;
+                    position: relative;
+                    opacity: 0;
+                    transition: all .5s;
+
+                    &:hover {
+                        opacity: 1;
+                        background: rgba(0, 0, 0, 0.6);
+                    }
+                }
+
+                &_title-tag-wrap {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    text-align: center;
+                }
+
+    
+    
+                &_title {
+                    color: $color-white;
+                    border-bottom: 1px solid #FFFFFF;
+                    line-height: 32px;
+                    padding-bottom: 10px;
+                    font-family: $tag-font-family;
+                }
+    
+                &_tag {
+                    color: $color-white;
+                    font-size: $h6-medium-font-size;
+                    font-family: $tag-font-family;
+                    transition: color .2s;
+                
+
+                    &:hover {
+                        color: rgba(255, 255, 255, 0.4)
+                    }
+                }
+            }
+            
+        }
+        @include breakpoint (medium) {
+            .post-card {
+                @include xy-cell(1 of 2, true , 20px, margin , right left top bottom);
+                height: 484px;
+            }
+        }
+
+        @include breakpoint (large) {
+            .post-card {
+                @include xy-cell(1 of 2, true , 44px, margin , right left top bottom);
+                height: 484px;
+            }
+            
+        }
+        @include breakpoint (xlarge) {
+            margin-top: 76px;
+
+            .post-card {
+                @include xy-cell(1 of 2, true , 88px, margin , right left top bottom);
+                height: 484px;
+            }
+        }
+
+
+    }
+}

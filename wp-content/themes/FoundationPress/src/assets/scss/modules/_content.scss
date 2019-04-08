@@ -1,5 +1,11 @@
 .main-container {
   @include xy-grid-container;
+  max-width: 90rem;
+  @include breakpoint(medium){
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  
 }
 
 .main-grid {
@@ -51,4 +57,8 @@
     }
 
   }
+}
+
+.page-template-front-archive {
+  background-color: $color-dark;
 }
