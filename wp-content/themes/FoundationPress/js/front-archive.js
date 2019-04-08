@@ -1,17 +1,50 @@
+var tagArray= [];
 $( document ).ready(function() {
-    var tagArray = [];
+    var tagArrayDisplay = [];
     $('.post_tag').each(function(){
-        if(tagArray.indexOf($(this).text())== -1){
-            tagArray.push($(this).text());
+        if(tagArrayDisplay.indexOf($(this).text())== -1){
+            tagArrayDisplay.push($(this).text());
         }
       
     })
 
-    tagArray.forEach(function(value){
+    tagArrayDisplay.forEach(function(value){
         let tagButton = '';
-        tagButton = `<a href="#" class="${value}">${value}</a> `;
+        tagButton = `<a href="#" onclick="tagInsert('${value}')" class="${value}">${value}</a> `;
         $('.filter_tags').append(tagButton);
-       
-        console.log(value);
     });
 });
+
+function tagInsert(tag){
+
+    if(tagArray.indexOf(tag) >-1){
+        tagArray.splice($.inArray(tag, tagArray),1);
+
+    }
+    else{
+        tagArray.push(tag);
+    }
+
+    filtering();
+}
+
+function filtering(){
+    if(tagArray.length==0){
+        $('.post_card').show();
+    }else{
+        $('.post_card').hide();
+        $('.post_card').each(function(){
+            var self=this;
+            tagArray.forEach(function(value){
+               
+              if(  $(self).hasClass(value)== true){
+                  $(self).show();
+              }
+            });
+           
+    
+    
+        });
+    }
+    
+}
