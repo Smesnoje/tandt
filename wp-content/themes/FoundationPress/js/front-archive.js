@@ -1,7 +1,8 @@
 var tagArray= [];
 $( document ).ready(function() {
+    
     var tagArrayDisplay = [];
-    $('.post_tag').each(function(){
+    $('.post-card_tag').each(function(){
         if(tagArrayDisplay.indexOf($(this).text())== -1){
             tagArrayDisplay.push($(this).text());
         }
@@ -10,12 +11,16 @@ $( document ).ready(function() {
 
     tagArrayDisplay.forEach(function(value){
         let tagButton = '';
-        tagButton = `<a href="#" onclick="tagInsert('${value}')" class="${value}">${value}</a> `;
-        $('.filter_tags').append(tagButton);
+        tagButton = ` <span  class="${value} front-header_filters--tag">${value}</span> `;
+        $('.front-header_filters').append(tagButton);
     });
+    $(".front-header_filters--tag").on('click',function(){
+        tagInsert($(this).text());
+      });
 });
 
 function tagInsert(tag){
+   
 
     if(tagArray.indexOf(tag) >-1){
         tagArray.splice($.inArray(tag, tagArray),1);
@@ -24,16 +29,15 @@ function tagInsert(tag){
     else{
         tagArray.push(tag);
     }
-
     filtering();
 }
 
 function filtering(){
     if(tagArray.length==0){
-        $('.post_card').show();
+        $('.post-card').show();
     }else{
-        $('.post_card').hide();
-        $('.post_card').each(function(){
+        $('.post-card').hide();
+        $('.post-card').each(function(){
             var self=this;
             tagArray.forEach(function(value){
                

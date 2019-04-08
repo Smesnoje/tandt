@@ -15,22 +15,26 @@ get_header(); ?>
 	<h2 class="front-header_title">Our Work</h2>
 
 	<div class="front-header_filters front-header_filters--tags">
-		<span class="front-header_filters--tag">branding</span>
-		<span class="front-header_filters--tag">packaging</span>
-		<span class="front-header_filters--tag">tvc</span>
-		<span class="front-header_filters--tag">soical</span>
-		<span class="front-header_filters--tag">web design</span>
-		<span class="front-header_filters--tag">category</span>
+	
 	</div>
 </div>
 <div class="posts-container">
-
-	<?php $posts = get_posts(-1) ?>
+<?php $args = array(
+	'posts_per_page'   => -1,
+	'offset'           => 0,
+	'cat'         => '',
+	'category_name'    => '',
+	'post_type'        => 'post',
+	'post_status'      => 'publish',
+);?>
+<?php $posts = get_posts($args) ?>
+<?php $br=0;?>
 	<?php foreach($posts as $post):?>
+	<?php $br++;?>
 	<?php // echo '<pre>' , var_dump($post) , '</pre>';?>
 	<!-- gets post tags -->
 	<?php $post_tags = get_field( "tags" );?>
-		<div data-aos="fade-up-right" class="post-card <?php echo $post_tags;?>" style="background-image: url(<?php echo(get_the_post_thumbnail_url());?>)">
+		<div data-aos="<?php echo ($br%2==0?'fade-up-left':'fade-up-right') ?>" class="post-card <?php echo $post_tags;?> <?php echo 'card-' . ($br%2==0?'even':'odd') ?>" style="background-image: url(<?php echo(get_the_post_thumbnail_url());?>)">
 		<!-- displays post title -->
 			<div class="post-card_hover">
 				<div class="post-card_title-tag-wrap">
