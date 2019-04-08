@@ -56,3 +56,5 @@ require_once( 'library/gutenberg.php' );
 
 /** If your site requires protocol relative url's for theme assets, uncomment the line below */
 // require_once( 'library/class-foundationpress-protocol-relative-theme-assets.php' );
+// globals
+$theme_root = get_template_directory_uri();
