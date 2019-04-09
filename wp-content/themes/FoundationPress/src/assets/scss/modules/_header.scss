@@ -1,0 +1,177 @@
+.gheader {
+
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
+form,fieldset,input,textarea,p,blockquote,th,td {
+    padding: 0;
+    margin: 0;
+	color: #fff;
+}
+
+a{
+	text-decoration:none;
+}
+
+table {
+    border-spacing: 0;
+}
+fieldset,img {
+    border: 0;
+}
+address,caption,cite,code,dfn,em,strong,th,var {
+    font-weight: normal;
+    font-style: normal;
+}
+strong{
+	font-weight: bold;
+}
+ol,ul {
+    list-style: none;
+    margin:0;
+    padding:0;
+}
+
+
+
+
+
+#headerfp, #headerfp2, #footer{
+		position:fixed;
+		display:block;
+		width: 100%;
+		z-index: 998;
+		text-align:center;
+		color: #f2f2f2;
+		padding: 20px 25px 0 25px;
+	} 
+
+#headerfp {
+	top:0px;
+}
+
+#headerfp2 {
+	top:0px;
+}
+
+.logofp {
+	float: left;
+	
+}
+
+.logofp a {
+	transition: 0.05s;
+	position: relative;
+    bottom: 0px;
+    
+    img {
+        height: 65px;
+    }
+}
+
+
+.logofp a:hover {
+	opacity: 1;
+	bottom: 2px;
+}
+
+
+
+label .menu {
+  position: absolute;
+  right: -40px;
+  top: 0px;
+  z-index: 999;
+  width: 200px;
+  height: 105px;
+  box-shadow: 0 0 0 0 rgba(0,0,0,0.75);
+  cursor: pointer;
+	
+}
+
+
+label .hamburger {
+  position: absolute;
+  top: 48px;
+  left: 38px;
+  width: 33px;
+  height: 3px;
+  background: #fff;
+  display: block;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  transition: .2s ease-in-out;
+}
+label .hamburger:after, label .hamburger:before {
+  transition: .2s ease-in-out;
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+}
+label .hamburger:before {
+  top: -12px;
+}
+label .hamburger:after {
+  bottom: -12px;
+}
+label input {
+  display: none;
+}
+label input:checked + .menu {
+  box-shadow: 0 100vh 0 100vw rgba(0,0,0,0.75);
+  border-radius: 0;
+  background: rgba(0,0,0,0.75);
+	
+}
+
+
+/*label input:checked + .menu .hamburger {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}*/
+
+label input:checked + .menu .hamburger:after {
+  
+  bottom: 2px;
+}
+
+label input:checked + .menu .hamburger:before {
+ 
+  top: 2px;
+}
+
+label input:checked + .menu + ul {
+  opacity: 1;
+}
+
+label ul {
+  z-index: 1001;
+  position: absolute;
+  top: 140px;
+  right: 260px;
+  opacity: 0;
+  transition: 0.2s ease-in-out;
+  text-align: right;
+	
+}
+
+label a {
+  margin-bottom: .3em;
+  display: block;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.82vw;
+  font-weight: 900;	  
+  text-decoration: none;
+	z-index: 1002;
+	font-family: 'Nunito Sans';
+}
+
+label a:hover {
+  color: #fff;
+text-decoration: underline;
+}
+
+}

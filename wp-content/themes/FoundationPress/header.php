@@ -28,28 +28,42 @@
 	<?php endif; ?>
 
 	<header class="site-header" role="banner">
-		<div class="site-title-bar title-bar" <?php foundationpress_title_bar_responsive_toggle(); ?>>
-			<div class="title-bar-left">
-				<button aria-label="<?php _e( 'Main Menu', 'foundationpress' ); ?>" class="menu-icon" type="button" data-toggle="<?php foundationpress_mobile_menu_id(); ?>"></button>
-				<span class="site-mobile-title title-bar-title">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-				</span>
-			</div>
-		</div>
+	<div class="gheader">
+	<div id="headerfp">
+		<div class="logofp">
+			<a href="index.html"><img height="65px" src="http://tandt.rs/img/header-logo.svg/img/header-logo.svg" /></a>
+		</div>		
+	</div>
+	<div id="headerfp2">
+    	<label>
+  			<input type='checkbox'>
+  			<span class='menu'>
+  			  <span class='hamburger'></span>
+  			</span>
+  			<ul>
+  			  <li>
+  			    <a href='http://tandt.rs/'>TandT</a>
+  			  </li>			  
+  			  <li>
+  			    <a href='http://tandt.rs/#our-factory'>Naša fabrika</a>
+  			  </li>
+                <li>
+  			    <a href='http://tandt.rs/portfolio.html'>Naši radovi</a>
+  			  </li>
+  			  <li>
+  			    <a href='http://tandt.rs/#t&team'>T&Team</a>
+  			  </li>			  
+			  <li>
+  			    <a href='http://tandt.rs/#contact-us'>Kontakt</a>
+  			  </li>
+                
+                <li>
+  			    <a href='http://tandt.rs/nagradnaigra'>Nagradna igra</a>
+  			  </li>
+  			</ul>
+		</label>
+	</div>
+</div>
 
-		<nav class="site-navigation top-bar" role="navigation">
-			<div class="top-bar-left">
-				<div class="site-desktop-title top-bar-title">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-				</div>
-			</div>
-			<div class="top-bar-right">
-				<?php foundationpress_top_bar_r(); ?>
-
-				<?php if ( ! get_theme_mod( 'wpt_mobile_menu_layout' ) || get_theme_mod( 'wpt_mobile_menu_layout' ) === 'topbar' ) : ?>
-					<?php get_template_part( 'template-parts/mobile-top-bar' ); ?>
-				<?php endif; ?>
-			</div>
-		</nav>
 
 	</header>
