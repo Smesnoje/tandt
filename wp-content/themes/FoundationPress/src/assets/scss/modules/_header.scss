@@ -144,6 +144,7 @@ label input:checked + .menu .hamburger:before {
 
 label input:checked + .menu + ul {
   opacity: 1;
+  visibility: visible;
 }
 
 label ul {
@@ -154,6 +155,7 @@ label ul {
   opacity: 0;
   transition: 0.2s ease-in-out;
   text-align: right;
+  visibility: hidden;
 	
 }
 
