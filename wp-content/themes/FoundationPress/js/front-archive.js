@@ -20,8 +20,7 @@ $( document ).ready(function() {
 });
 
 function tagInsert(tag){
-   
-
+    tag=tag.replace(/ /g, '_');
     if(tagArray.indexOf(tag) >-1){
         tagArray.splice($.inArray(tag, tagArray),1);
 
