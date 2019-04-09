@@ -1,10 +1,23 @@
 .footer-container {
   @include xy-grid-container;
   max-width: 90rem;
+  @include breakpoint(small) {
+    padding: 0;
+  }
+  @include breakpoint(medium) {
+    padding: 0 174px;
+  }
+
+  .footer-title-link-wrap {
+    border-bottom: 1px solid $color-white;
+    margin-bottom: 140px;
+    padding-bottom: 42px;
+  }
 
   .footer-title {
     color: $color-white;
     width: 100%;
+    margin-bottom: 30px;
   }
   .footer-link {
     color: $color-white;
@@ -12,20 +25,20 @@
   }
 }
 
-.footer-grid {
-  @include xy-grid;
-  padding: rem-calc(30) 0;
+// .footer-grid {
+//   @include xy-grid;
+//   padding: rem-calc(30) 0;
 
-  section {
-    @include xy-cell();
-    @include breakpoint(large) {
-      @include xy-cell(auto);
-    }
-  }
+//   section {
+//     @include xy-cell();
+//     @include breakpoint(large) {
+//       @include xy-cell(auto);
+//     }
+//   }
 
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-}
+//   ul {
+//     list-style-type: none;
+//     margin: 0;
+//     padding: 0;
+//   }
+// }

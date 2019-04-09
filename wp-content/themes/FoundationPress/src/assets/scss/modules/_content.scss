@@ -60,5 +60,12 @@
 }
 
 .page-template-front-archive {
-  background-color: $color-dark;
+  background-color: #0e0e0e;
+  .front-wrap { 
+    background-color: #0e0e0e;
+  }
+  .front-footer-wrap {
+    background-color: #0e0e0e;
+  }
 }
+

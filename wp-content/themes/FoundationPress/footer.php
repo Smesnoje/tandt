@@ -8,14 +8,16 @@
  * @since FoundationPress 1.0.0
  */
 ?>
+<div class="front-footer-wrap">
 
 <footer class="footer-container">
-	<div class="footer-grid">
+	<div class="footer-title-link-wrap">
 		<h3 class= "footer-title">Interestend in making something great?</h3>
 		<a href="#" class="footer-link">Give us a call or contact us!</a>
 	</div>
 </footer>
 
 <?php wp_footer(); ?>
+</div>
 </body>
 </html>
