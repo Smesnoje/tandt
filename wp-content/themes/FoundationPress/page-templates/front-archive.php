@@ -42,7 +42,9 @@ get_header(); ?>
 		<!-- displays post title -->
 			<div class="post-card_hover">
 				<div class="post-card_title-tag-wrap">
-					<h3 class="post-card_title"><?php echo($post->post_title);?></h3>
+				
+				
+					<h3 class="post-card_title"><a href="<?php echo(get_post_permalink())?>"><?php echo($post->post_title);?></h3></a>
 					<!-- gets post featured image -->
 					<!-- <?php echo(get_the_post_thumbnail_url());?> -->
 	
