@@ -1,0 +1,20 @@
+.single-post {
+
+    .main-container {
+        @include breakpoint(small) {
+            
+        }
+        @include breakpoint(medium) {
+            max-width: 76rem;
+        }
+        @include breakpoint(large) {
+            
+        }
+        @include breakpoint(xlarge) {
+            
+        }
+        @include breakpoint(xxlarge) {
+            
+        }
+    }
+}

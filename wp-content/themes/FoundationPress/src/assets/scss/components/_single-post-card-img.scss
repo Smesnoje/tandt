@@ -1,0 +1,29 @@
+.single-post {
+
+    .post-card-image-section {
+        margin-top: 130px;
+        .main-container {
+            max-width: 77.8rem;
+        }
+    }
+
+    .post-card-image-container {
+        
+    }
+
+    .post-card-image-content {
+
+        @include xy-grid
+
+        &_item {
+            @include xy-cell(1 of 3, true, 30px);
+            height: 509px;
+            &--img {
+                background-size: cover;
+                background-position: center center;
+                height: 100%;
+            }
+        }
+
+    }
+}

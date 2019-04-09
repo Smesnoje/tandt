@@ -47,6 +47,20 @@
   }
 }
 
+.single-post {
+  .footer-title-link-wrap {
+    border-bottom: 1px solid $color-black;
+  }
+  
+  .footer-title {
+    color: $color-black;
+  }
+
+  .footer-link {
+    color: $color-black;
+  }
+}
+
 // .footer-grid {
 //   @include xy-grid;
 //   padding: rem-calc(30) 0;

@@ -79,8 +79,17 @@
 @import "components/featured-image";
 @import "components/dividers";
 @import "components/links";
+@import "components/single-post-hero";
+@import "components/single-post-subtext";
+@import "components/single-post-img";
+@import "components/single-post-text-grid";
+@import "components/single-post-video";
+@import "components/single-post-card-img";
+@import "components/single-post-asymmetric-text";
+@import "components/single-post-above-footer";
 
 // Templates
 @import "templates/front";
 @import "templates/kitchen-sink";
 @import "templates/front-archive";
+@import "templates/single-post";

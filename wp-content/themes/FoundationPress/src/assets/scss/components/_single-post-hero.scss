@@ -1,0 +1,36 @@
+.single-post {
+
+    .post-hero-section {
+        
+        &_hero {
+            height: 1042px;
+            background-size: cover;
+            background-position: center;
+
+            &--container {
+                position: relative;
+                padding-top: 140px;
+
+                .post-hero-section-title-tag-wrap {
+
+                    .post-hero-section-title {
+                        line-height: 60px;
+                        margin-bottom: 0;
+                    }
+    
+                    .post-hero-section-tag {
+    
+                    }
+                }
+
+
+                .post-hero-section-year {
+                    position: absolute;
+                    top: 140px;
+                    right: 60px;
+                }
+            }
+        }
+
+    }
+}

@@ -1,0 +1,26 @@
+.single-post {
+
+    .post-img-section {
+        margin-top: 145px;
+    }
+
+    .post-img-container {
+        
+
+        .post-img-content {
+
+            &_img-1 {
+                height: 380px;
+                background-size: cover;
+                background-position: center;
+            }
+
+            &_img-2 {
+                margin-top: 35px;
+                height: 680px;
+                background-size: cover;
+                background-position: center;
+            }
+        }
+    }
+}

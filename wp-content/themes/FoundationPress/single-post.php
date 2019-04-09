@@ -8,6 +8,7 @@
 
 get_header(); ?>
 
+
 <?php 
 // $sections_array=[];
 
@@ -22,6 +23,7 @@ get_header(); ?>
     //   var_dump($sections_array);
                    
   // var_dump(get_post());
+  
   include('page-templates/sections/post-hero-section.php');
   include('page-templates/sections/post-subtext-section.php');
   include('page-templates/sections/post-img-section.php');
@@ -34,11 +36,11 @@ get_header(); ?>
   
   
 ?>
-
-
 <div class="main-container">
 	<div class="main-grid">
 		<main class="main-content">
+
+
 			
 		</main>
 	</div>
