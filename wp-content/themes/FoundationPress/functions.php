@@ -58,3 +58,4 @@ require_once( 'library/gutenberg.php' );
 // require_once( 'library/class-foundationpress-protocol-relative-theme-assets.php' );
 // globals
 $theme_root = get_template_directory_uri();
+$site_root = get_site_url();

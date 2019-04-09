@@ -15,13 +15,19 @@ $( document ).ready(function() {
         $('.front-header_filters').append(tagButton);
     });
     $(".front-header_filters--tag").on('click',function(){
-        tagInsert($(this).text());
+        tagInsert($(this));
       });
 });
 
-function tagInsert(tag){
-   
-
+function tagInsert(element){
+    if ( $( element ).hasClass( "tag-active" ) ) {
+        $( element ).removeClass("tag-active");
+    }
+    else{
+        $( element ).addClass("tag-active");
+    }
+    tag=$(element).text()
+    tag=tag.replace(/ /g, '_');
     if(tagArray.indexOf(tag) >-1){
         tagArray.splice($.inArray(tag, tagArray),1);
 
