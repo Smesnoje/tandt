@@ -40,15 +40,19 @@ function tagInsert(element){
 
 function filtering(){
     if(tagArray.length==0){
-        $('.post-card').show();
+        $('.post-card').removeClass('filter-hidden');
+        $('.post-card').addClass('filter-visible');
     }else{
-        $('.post-card').hide();
+        $('.post-card').addClass('filter-hidden');
+        $('.post-card').removeClass('filter-visible');
         $('.post-card').each(function(){
             var self=this;
             tagArray.forEach(function(value){
                
               if(  $(self).hasClass(value)== true){
-                  $(self).show();
+                  $(self).removeClass('filter-hidden');
+                  $(self).addClass('filter-visible');
+                  
               }
             });
            
