@@ -1,12 +1,27 @@
+.front-footer-wrap {
+  @include breakpoint(small) {
+    padding: 10px;
+    margin: auto;
+  }
+  @include breakpoint(medium) {
+    padding: 0;
+  }
+}
+
 .footer-container {
   @include xy-grid-container;
   max-width: 90rem;
   @include breakpoint(small) {
-    padding: 0;
+    padding: 0 20px;
   }
   @include breakpoint(medium) {
+    padding: 0 40px;
+  }
+  @include breakpoint(large) {
     padding: 0 174px;
   }
+
+  
 
   .footer-title-link-wrap {
     border-bottom: 1px solid $color-white;
@@ -22,6 +37,13 @@
   .footer-link {
     color: $color-white;
     width: 100%;
+    display: flex; 
+
+    .eva-arrow-forward {
+      align-self: center;
+      margin-left: 30px;
+      font-size: 22px;
+    }
   }
 }
 

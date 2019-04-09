@@ -13,7 +13,7 @@
 <footer class="footer-container">
 	<div class="footer-title-link-wrap">
 		<h3 class= "footer-title">Interestend in making something great?</h3>
-		<a href="#" class="footer-link">Give us a call or contact us!</a>
+		<a href="http://www.tandt.rs/" class="footer-link">Give us a call or contact us! <i class="eva eva-arrow-forward"></i></a>
 	</div>
 </footer>
 

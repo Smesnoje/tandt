@@ -18,6 +18,7 @@ get_header(); ?>
 	<h2 class="front-header_title">Our Work</h2>
 
 	<div class="front-header_filters front-header_filters--tags">
+		
 	
 	</div>
 </div>

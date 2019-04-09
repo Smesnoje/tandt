@@ -1,0 +1,15 @@
+<?xml version="1.0" standalone="no"?> 
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<svg xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <font id="icons" horiz-adv-x="16">
+    <font-face font-family="icons"
+      units-per-em="12" ascent="12"
+      descent="0" />
+    <missing-glyph horiz-adv-x="0" />
+    <glyph glyph-name="arrow-right"
+      unicode="&#xF101;"
+      horiz-adv-x="16" d=" M10.7742 11.455803C10.5562 11.681399 10.1935 11.681399 9.96786 11.455803C9.74989 11.237829 9.74989 10.87505 9.96786 10.65758L14.0565 6.56892H0.564497C0.249984 6.56841 0 6.31843 0 6.00391C0 5.6894 0.249984 5.43129 0.564497 5.43129H14.0565L9.96786 1.3502C9.74989 1.1247 9.74989 0.7614 9.96786 0.5439C10.1935 0.3183 10.5567 0.3183 10.7742 0.5439L15.8308 5.60048C16.0564 5.81846 16.0564 6.18124 15.8308 6.39871L10.7742 11.455803z" />
+  </font>
+</defs>
+</svg>

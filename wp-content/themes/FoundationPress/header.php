@@ -17,6 +17,7 @@
 		<link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 		<link rel="stylesheet" href="http://localhost:3000/tandt/wp-content/themes/FoundationPress/node_modules/aos/dist/aos.css" />
+		<link rel="stylesheet" href="http://localhost:3000/tandt/wp-content/themes/FoundationPress/node_modules/eva-icons/style/eva-icons.css">
 		<script src="http://localhost:3000/tandt/wp-content/themes/FoundationPress/node_modules/aos/dist/aos.js"></script>
 		<?php wp_head(); ?>
 	</head>
