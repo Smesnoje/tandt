@@ -81,6 +81,16 @@
           
             @include xy-grid;
 
+            .filter-visible {
+                opacity: 1;
+                display: block;
+            }
+
+            .filter-hidden {
+                opacity: 0;
+                display: none;
+            }
+
             .post-card {
                 @include xy-cell (12);
                 margin-bottom: 30px;
@@ -118,6 +128,15 @@
                     line-height: 32px;
                     padding-bottom: 10px;
                     font-family: $tag-font-family;
+
+                    a {
+                        color: $color-white;
+                        transition: color .2s;
+
+                        &:hover {
+                            color: rgba(255, 255, 255, 0.4)
+                        }
+                    }
                 }
     
                 &_tag {

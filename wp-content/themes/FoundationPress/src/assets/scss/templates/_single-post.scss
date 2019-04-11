@@ -17,4 +17,34 @@
             
         }
     }
+
+    .post_navigation {
+        border-bottom: 1px solid $color-black;
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 42px;
+        margin-bottom: 190px;
+        max-width: 68.3rem;
+        display: flex;
+        justify-content: space-between;
+
+        a {
+            color: $color-black;
+            transition: color .2s;
+
+            &:hover {
+                color: rgba($color-black,0.6);
+            }
+        }
+
+        .next {
+            display: flex;
+            
+            .eva {
+                margin-left: 20px;
+                font-size: 20px;
+                align-self: center;
+            }
+        }
+    }
 }

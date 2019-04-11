@@ -62,3 +62,9 @@ function filtering(){
     }
     
 }
+
+function removeAOS(){
+    if ($("#post-card").hasClass("filter-visible")) {
+        
+    }
+}
