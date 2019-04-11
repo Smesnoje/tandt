@@ -56,6 +56,21 @@ require_once( 'library/gutenberg.php' );
 
 /** If your site requires protocol relative url's for theme assets, uncomment the line below */
 // require_once( 'library/class-foundationpress-protocol-relative-theme-assets.php' );
+// new post type
+function create_post_type() {
+    register_post_type( 'slide',
+      array(
+        'labels' => array(
+          'name' => __( 'Slide' ),
+          'singular_name' => __( 'Slide' )
+        ),
+        'public' => true,
+        'has_archive' => true,
+        'supports' => array( 'title', 'editor','thumbnail' )
+      )
+    );
+  }
+  add_action( 'init', 'create_post_type' );
 // globals
 $theme_root = get_template_directory_uri();
 $site_root = get_site_url();

@@ -39,9 +39,13 @@ function tagInsert(element){
 }
 
 function filtering(){
+    $('.post-card').removeAttr("data-aos");
+    $('.post-card').removeClass('aos-init');
+    $('.post-card').removeClass('aos-animate');
     if(tagArray.length==0){
         $('.post-card').removeClass('filter-hidden');
         $('.post-card').addClass('filter-visible');
+       
     }else{
         $('.post-card').addClass('filter-hidden');
         $('.post-card').removeClass('filter-visible');
