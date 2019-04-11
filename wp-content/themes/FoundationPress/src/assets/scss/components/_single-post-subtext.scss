@@ -1,20 +1,42 @@
 .single-post {
 
     .post-subtext-section {
-        margin-top: 180px;
-        
-        .post-subtext-container {
+        @include breakpoint(small) {
+            margin-top: 80px;
+
+                       
+            .post-subtext-container {
             
            
+            }
+
+            .post-subtext {
+
+                &_content {
+                    font-size: $h5-medium-font-size;
+                    line-height: 30px;
+                    padding: 0 2rem;
+                    text-align: justify;
+                }
+            }
         }
 
-        .post-subtext {
+        @include breakpoint(medium) {
+            margin-top: 180px;
 
-            &_content {
-                font-size: $h3-medium-font-size;
-                line-height: 56px;
-                padding: 0 2rem;
-                text-align: justify;
+                                   
+            .post-subtext-container {
+            
+           
+            }
+
+            .post-subtext {
+
+                &_content {
+                    font-size: $h3-medium-font-size;
+                    line-height: 56px;
+                    padding: 0 2rem;
+                }
             }
         }
     }

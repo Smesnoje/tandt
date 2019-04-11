@@ -1,32 +1,56 @@
 .single-post {
     .post-text-grid-section {
-        margin-top: 120px;
+        @include breakpoint(small) {
+            margin-top: 60px;
         
-        .main-container {
-            max-width: 79rem;
+            .main-container {
+                max-width: 79rem;
+            }
+
+            .post-text-grid-container {
+        
+
+            }
+        
+            .post-text-grid-content {
+                @include xy-grid;
+        
+                &_item {
+                    @include xy-cell (12, true, 30px);
+        
+                    &--title {
+                        margin-bottom: 0;
+                        text-align: center;
+                    }
+        
+                    &--text {
+                        font-size: $h5-medium-font-size;
+                        line-height: 36px;
+                        text-align: justify;
+                    }
+                }
+            }
+        }
+
+        @include breakpoint(medium) {
+            margin-top: 120px;
+
+            .post-text-grid-content {
+        
+                &_item {
+                    @include xy-cell (1 of 2, true, 50px, margin , left right bottom);
+        
+                    &--title {
+                        text-align: unset;
+                    }
+        
+                    &--text {
+                        font-size: $h5-medium-font-size;
+                    }
+                }
+            }
         }
     }
 
-    .post-text-grid-container {
-        
 
-    }
-
-    .post-text-grid-content {
-        @include xy-grid;
-
-        &_item {
-            @include xy-cell (1 of 2, true, 50px, margin , left right bottom);
-
-            &--title {
-                margin-bottom: 0;
-            }
-
-            &--text {
-                font-size: $h5-medium-font-size;
-                line-height: 36px;
-                text-align: justify;
-            }
-        }
-    }
 }

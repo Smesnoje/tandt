@@ -38,7 +38,7 @@ get_header(); ?>
 	<?php // echo '<pre>' , var_dump($post) , '</pre>';?>
 	<!-- gets post tags -->
 	<?php $post_tags = get_field( "tags" );?>
-		<div data-aos="<?php echo ($br%2==0?'fade-up-left':'fade-up-right') ?>" class="post-card <?php foreach($post_tags as $tag){$tag = str_replace(' ','_',$tag);echo($tag.' ');}?> <?php echo 'card-' . ($br%2==0?'even':'odd') ?>" style="background-image: url(<?php echo(get_the_post_thumbnail_url());?>)">
+		<div id="post-card" data-aos="<?php echo ($br%2==0?'fade-up-left':'fade-up-right') ?>"  class="post-card <?php foreach($post_tags as $tag){$tag = str_replace(' ','_',$tag);echo($tag.' ');}?> <?php echo 'card-' . ($br%2==0?'even':'odd') ?>" style="background-image: url(<?php echo(get_the_post_thumbnail_url());?>)">
 		<!-- displays post title -->
 			<div class="post-card_hover">
 				<div class="post-card_title-tag-wrap">

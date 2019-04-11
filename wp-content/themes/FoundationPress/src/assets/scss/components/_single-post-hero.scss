@@ -1,36 +1,75 @@
 .single-post {
 
     .post-hero-section {
-        
-        &_hero {
-            height: 1042px;
-            background-size: cover;
-            background-position: center;
+        @include breakpoint(small) {
 
-            &--container {
-                position: relative;
-                padding-top: 140px;
+            &_hero {
+                height: 680px;
+                background-size: cover;
+                background-position: center;
 
-                .post-hero-section-title-tag-wrap {
+                &--container {
+                    position: relative;
+                    padding-top: 140px;
 
-                    .post-hero-section-title {
-                        line-height: 60px;
-                        margin-bottom: 0;
-                    }
+                    .post-hero-section-title-tag-wrap {
+
+                        text-align: center;
+
+                        .post-hero-section-title {
+                            line-height: 60px;
+                            margin-bottom: 0;
+                            font-size: $h3-medium-font-size;
+                        }
     
-                    .post-hero-section-tag {
+                        .post-hero-section-tag {
     
+                        }
                     }
-                }
 
 
-                .post-hero-section-year {
-                    position: absolute;
-                    top: 140px;
-                    right: 60px;
+                    .post-hero-section-year {
+                        position: relative;
+                        text-align: center;
+                        font-size: $h3-medium-font-size;
+                    }
                 }
             }
         }
+        @include breakpoint(medium) {
+            
+            &_hero {
+                height: 1042px;
 
+                &--container {
+                    position: relative;
+                    padding-top: 140px;
+
+                    .post-hero-section-title-tag-wrap {
+
+                        text-align: unset;
+
+                        .post-hero-section-title {
+                            line-height: 60px;
+                            margin-bottom: 0;
+                            font-size: $h1-medium-font-size;
+                        }
+    
+                        .post-hero-section-tag {
+    
+                        }
+                    }
+
+
+                    .post-hero-section-year {
+                        position: absolute;
+                        top: 140px;
+                        right: 60px;
+                        text-align: unset;
+                        font-size: $h1-medium-font-size;
+                    }
+                }
+            }
+        }
     }
 }

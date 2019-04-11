@@ -1,38 +1,80 @@
 .single-post {
 
     .post-asym-text-grid-section {
-        margin-top: 135px;
-    }
+        @include breakpoint(small) {
+            margin-top: 65px;
 
-    .post-asym-text-grid-container {
-
-    }
-
-    .post-asym-text-grid-content {
-        @include xy-grid;
-
-        &_item-1 {
-            @include xy-cell (2 of 3);
-
-            &--title {
+            .post-asym-text-grid-container {
 
             }
-
-            &--text {
-                line-height: 36px;
+        
+            .post-asym-text-grid-content {
+                @include xy-grid;
+        
+                &_item-1 {
+                    @include xy-cell (12);
+        
+                    &--title {
+                        text-align: center;
+                    }
+        
+                    &--text {
+                        line-height: 36px;
+                    }
+                }
+        
+                &_item-2 {
+                    @include xy-cell (12);
+                    margin-top: 20px;
+        
+                    &--title {
+                        text-align: center;
+                    }
+        
+                    &--text {
+                        line-height: 36px;
+                    }
+                }
             }
         }
 
-        &_item-2 {
-            @include xy-cell (1 of 3);
+        @include breakpoint(medium) {
+            margin-top: 135px;
 
-            &--title {
+            .post-asym-text-grid-container {
 
             }
-
-            &--text {
-                line-height: 36px;
+        
+            .post-asym-text-grid-content {
+                @include xy-grid;
+        
+                &_item-1 {
+                    @include xy-cell (2 of 3);
+        
+                    &--title {
+                        text-align: unset;
+                    }
+        
+                    &--text {
+                        
+                    }
+                }
+        
+                &_item-2 {
+                    @include xy-cell (1 of 3);
+        
+                    &--title {
+                        text-align: unset;
+                    }
+        
+                    &--text {
+                        
+                    }
+                }
             }
         }
+        
     }
+
+
 }

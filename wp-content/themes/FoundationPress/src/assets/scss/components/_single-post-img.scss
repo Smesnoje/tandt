@@ -1,25 +1,49 @@
 .single-post {
 
     .post-img-section {
-        margin-top: 145px;
-    }
+        @include breakpoint(small) {
+            margin-top: 70px;
 
-    .post-img-container {
+
+            .post-img-container {
         
 
-        .post-img-content {
+                .post-img-content {
 
-            &_img-1 {
-                height: 380px;
-                background-size: cover;
-                background-position: center;
+                    &_img-1 {
+                        height: 300px;
+                        background-size: cover;
+                        background-position: center;
+                    }
+
+                    &_img-2 {
+                        margin-top: 25px;
+                        height: 480px;
+                        background-size: cover;
+                        background-position: center;
+                    }
+                }
             }
+        }
+        
+        @include breakpoint(medium) {
+            margin-top: 145px;
 
-            &_img-2 {
-                margin-top: 35px;
-                height: 680px;
-                background-size: cover;
-                background-position: center;
+
+            .post-img-container {
+        
+
+                .post-img-content {
+
+                    &_img-1 {
+                        height: 380px;
+                    }
+
+                    &_img-2 {
+                        margin-top: 35px;
+                        height: 680px;
+                    }
+                }
             }
         }
     }
