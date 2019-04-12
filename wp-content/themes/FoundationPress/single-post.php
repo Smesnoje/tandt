@@ -40,7 +40,7 @@ foreach($new_array as $template_name=>$order){
   include('page-templates/sections/'.$template_name.'.php');
 }  
 ?>
-<!-- <div class="menu-color-blob"> <?php echo(get_field('menu_colour')); ?></div> -->
+<div class="menu-color-blob"> <?php echo(get_field('menu_colour')); ?></div>
 <div class="post_navigation main-container"> 
 <a href="<?php echo get_home_url();?>">See all projects</a>
 <?php if (get_previous_post()):?>
