@@ -19,6 +19,7 @@ $site_root = get_site_url();
 		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 		<link rel="stylesheet" href="<?php echo $site_root;?>/wp-content/themes/FoundationPress/node_modules/aos/dist/aos.css" />
 		<link rel="stylesheet" href="<?php echo $site_root;?>/wp-content/themes/FoundationPress/node_modules/eva-icons/style/eva-icons.css">
+		<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 		<script src="<?php echo $site_root;?>/wp-content/themes/FoundationPress/node_modules/aos/dist/aos.js"></script>
 		<?php wp_head(); ?>
 	</head>
