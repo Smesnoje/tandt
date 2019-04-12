@@ -22,6 +22,9 @@
 					<?php endforeach;?>
 				<?php endif;?>
 			</h5>
+			<h5 class="post-hero-section-tag">
+			Client:	<?php the_field('client');?>
+			</h5>
 		</div>
 		<h2 class="post-hero-section-year">
 			<!-- year -->
