@@ -33,7 +33,7 @@ $site_root = get_site_url();
 	<div class="gheader">
 	<div id="headerfp">
 		<div class="logofp">
-			<a href="index.html"><img height="65px" src="http://tandt.rs/img/header-logo.svg/img/header-logo.svg" /></a>
+			<a href="index.html"><i class="svg"></i></a>
 		</div>		
 	</div>
 	<div id="headerfp2">

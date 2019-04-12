@@ -1,6 +1,7 @@
 .gheader {
 
 
+
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
 form,fieldset,input,textarea,p,blockquote,th,td {
     padding: 0;
@@ -63,9 +64,18 @@ ol,ul {
 	position: relative;
     bottom: 0px;
     
-    img {
-        height: 65px;
-    }
+  .svg {
+    height: 65px;
+    content:url(http://tandt.rs/img/header-logo.svg/img/header-logo.svg);
+  }
+
+  .svg::before {
+    content: "";
+    display: block;
+    background-image: url(http://tandt.rs/img/header-logo.svg/img/header-logo.svg);
+    background-size: cover;
+    height: 65px;
+  }
 }
 
 
@@ -120,17 +130,19 @@ label input {
   display: none;
 }
 label input:checked + .menu {
-  box-shadow: 0 100vh 0 100vw rgba(0,0,0,0.75);
-  border-radius: 0;
-  background: rgba(0,0,0,0.75);
+  
+
+  @include breakpoint(small) {
+    box-shadow: 0 10000px 0 10000px rgba(0,0,0,0.75);
+    border-radius: 0;
+    background: rgba(0,0,0,0.75);
+  }
+
+  @include breakpoint(medium) {
+    box-shadow: 0 100vh 0 100vw rgba(0,0,0,0.75);
+  }
 	
 }
-
-
-/*label input:checked + .menu .hamburger {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-}*/
 
 label input:checked + .menu .hamburger:after {
   
@@ -148,27 +160,44 @@ label input:checked + .menu + ul {
 }
 
 label ul {
-  z-index: 1001;
-  position: absolute;
-  top: 140px;
-  right: 260px;
-  opacity: 0;
-  transition: 0.2s ease-in-out;
-  text-align: right;
-  visibility: hidden;
+
+  @include breakpoint (small) {
+    z-index: 1001;
+    position: absolute;
+    top: 140px;
+    right: 50%;
+    transform: translateX(50%);
+    text-align: center;
+    opacity: 0;
+    transition: 0.2s ease-in-out;
+    visibility: hidden;
+  }
+
+  @include breakpoint (medium) {
+    top: 140px;
+    right: 260px;
+    text-align: right;
+  }
 	
 }
 
 label a {
-  margin-bottom: .3em;
-  display: block;
-  color: #fff;
-  text-transform: uppercase;
-  font-size: 1.82vw;
-  font-weight: 900;	  
-  text-decoration: none;
-	z-index: 1002;
-	font-family: 'Nunito Sans';
+  @include breakpoint(small) {
+    margin-bottom: .3em;
+    display: block;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: $h5-medium-font-size;
+    font-weight: 900;	  
+    text-decoration: none;
+    z-index: 1002;
+    font-family: 'Nunito Sans';
+  }
+
+  @include breakpoint(medium) {
+    font-size: 1.82vw;
+  }
+
 }
 
 label a:hover {

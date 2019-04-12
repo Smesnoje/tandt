@@ -1,6 +1,29 @@
 .page-template-slide-archive {
     @include breakpoint(small) {
 
+
+        .gheader {
+            label .hamburger {
+               background: $color-black;
+            }
+            
+            label .hamburger:after, label .hamburger:before { 
+               background: $color-black;
+            }
+    
+            .svg {
+                content:url(http://localhost:3000/tandt/wp-content/themes/FoundationPress/src/assets/images/vectorpaint.svg)!important;
+            }
+    
+            .svg::before {
+                content: "";
+                display: block;
+                background-image: url(http://localhost:3000/tandt/wp-content/themes/FoundationPress/src/assets/images/vectorpaint.svg)!important;
+                background-size: cover;
+                height: 65px;
+            }
+        }
+
         .main-container {
             max-width: 82rem;
             padding: 0 1rem;

@@ -82,15 +82,12 @@
             @include xy-grid;
 
             .filter-visible {
-                opacity: 1;
                 display: block;
-                transition: all 1s;
+
             }
 
             .filter-hidden {
-                opacity: 0;
                 display: none;
-                transition: all 1s;
             }
 
             .post-card {
