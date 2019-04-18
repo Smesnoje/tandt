@@ -1,6 +1,10 @@
 .single-post {
 
-    .gheader {
+    .menu-color-blob {
+        display: none;
+    }
+
+    .ghdark {
         label .hamburger {
            background: $color-black;
         }
@@ -20,6 +24,28 @@
             background-size: cover;
             height: 65px;
         }
+    }
+
+    .ghlight {
+        label .hamburger {
+            background: $color-white;
+         }
+         
+         label .hamburger:after, label .hamburger:before { 
+            background: $color-white;
+         }
+ 
+         .svg {
+             content:url(http://tandt.rs/img/header-logo.svg/img/header-logo.svg)!important;
+         }
+ 
+         .svg::before {
+             content: "";
+             display: block;
+             background-image: url(http://tandt.rs/img/header-logo.svg/img/header-logo.svg)!important;
+             background-size: cover;
+             height: 65px;
+         }
     }
 
     .main-container {
